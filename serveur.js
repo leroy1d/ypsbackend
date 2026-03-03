@@ -78,11 +78,12 @@ const pool = mysql.createPool({
   password: 'wNbYSj927pYX2K5s6nDB',
   database: 'bu2lzbc2luiolb9b29j8',
   port: 3306,
-  waitForConnections: true,
-  connectionLimit: 10, // Maximum de connexions simultanées
+   waitForConnections: true,
+  connectionLimit: 15,
   queueLimit: 0,
   enableKeepAlive: true,
-  keepAliveInitialDelay: 0
+  keepAliveInitialDelay: 0,
+  connectTimeout: 60000
 });
 
 // Promisify pour utiliser async/await
